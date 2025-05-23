@@ -1,0 +1,2 @@
+# mintxen
+batch minting xenfts
