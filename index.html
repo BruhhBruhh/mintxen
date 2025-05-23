@@ -1,1 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mintxen.com</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            height: 100vh;
+            font-family: 'Cherry Bomb One', cursive;
+            background: linear-gradient(
+                135deg,
+                #8b5cf6,  /* purple-500 */
+                #3b82f6,  /* blue-500 */
+                #06b6d4,  /* cyan-500 */
+                #10b981,  /* green-500 */
+                #eab308,  /* yellow-500 */
+                #ef4444,  /* red-500 */
+                #6b7280,  /* gray-500 */
+                #9ca3af   /* gray-400 */
+            );
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease infinite;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .hero-container {
+            text-align: center;
+        }
+
+        .hero-text {
+            font-size: 4rem;
+            color: white;
+            text-shadow: 
+                2px 2px 4px rgba(0, 0, 0, 0.3),
+                0 0 20px rgba(255, 255, 255, 0.2);
+            text-align: center;
+            letter-spacing: 2px;
+            animation: pulse 2s ease-in-out infinite alternate;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            letter-spacing: 1px;
+            animation: fadeIn 3s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 2rem;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .social-link {
+            color: white;
+            font-size: 2rem;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            opacity: 0.8;
+        }
+
+        .social-link:hover {
+            transform: scale(1.2);
+            opacity: 1;
+        }
+
+        @keyframes pulse {
+            from {
+                text-shadow: 
+                    2px 2px 4px rgba(0, 0, 0, 0.3),
+                    0 0 20px rgba(255, 255, 255, 0.2);
+            }
+            to {
+                text-shadow: 
+                    2px 2px 4px rgba(0, 0, 0, 0.3),
+                    0 0 30px rgba(255, 255, 255, 0.4);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-text {
+                font-size: 2.5rem;
+                letter-spacing: 1px;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .footer {
+                bottom: 1rem;
+                gap: 1.5rem;
+            }
+            
+            .social-link {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-text {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-container">
+        <h1 class="hero-text">mintxen.com</h1>
+        <p class="subtitle">batch minting coming xoon</p>
+    </div>
+    
+    <footer class="footer">
+        <a href="https://x.com/XEN_Crypto" target="_blank" rel="noopener noreferrer" class="social-link">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+        </a>
+        <a href="https://t.me/XENCryptoTalk" target="_blank" rel="noopener noreferrer" class="social-link">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+            </svg>
+        </a>
+    </footer>
+</body>
+</html>
